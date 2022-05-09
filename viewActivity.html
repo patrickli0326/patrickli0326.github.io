@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="Activity.js"></script>
+    <script>window.onload = Load2;</script>
+</head>
+<body>
+    <div class="BA-topbg">
+        <div class="BA-wrapper BA-top">
+            <a href="Mainpage.html"><img width="200" height="100" Class="BA-logo" src="picture/CUIFC.jpg"></a>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <p class="navbar-text" style="height: 26px">CUIFC</p>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a id="Home_button" href="Mainpage.html">Home</a></li>
+                <li><a href="./Profile.html">Profile</a></li>
+                <li><a href="./Activity.html">Activity Management</a></li>
+                <li><a href="./ReviewPage.html">Activity Review</a></li>
+                <li><a href="./Setting.html">Setting</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="logout_button" href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <p id="test"></p>
+        <a href="/Activity.html" class="previous">&laquo; Go back</a>
+    </div>
+    <div class="container-fluid">
+        <table id="otab" class="table table-hover" style="width: 100%;visibility:hidden;">
+            <caption style="font-size:150%;">Organized activity</caption>
+            <thead>
+                <tr>
+                    <th class="a">ActivityID</th>
+                    <th class="b">Activity Name</th>
+                    <th class="d">Date</th>
+                    <th class="c">Status</th>
+                    <th class="a">Finish</th>
+                    <th class="a">Cancel</th>
+                    <th class="a">Join Chat Room</th>
+                </tr>
+            </thead>
+            <tbody id="orows">
+            </tbody>
+        </table>
+        <br />
+        <table id="jtab" class="table table-hover" style="width:100%;visibility:hidden;">
+            <caption style="font-size:150%;">Joined activity</caption>
+            <thead>
+                <tr>
+                    <th class="a">ActivityID</th>
+                    <th class="b">Activity Name</th>
+                    <th class="d">Date</th>
+                    <th class="c">Status</th>
+                    <th class="a">Withdraw</th>
+                    <th class="a">Join Chat Room</th>
+                </tr>
+            </thead>
+            <tbody id="jrows">
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
