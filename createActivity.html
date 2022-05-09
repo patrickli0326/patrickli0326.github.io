@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="Activity.js"></script>
+    <script>window.onload = createLoad;</script>
+</head>
+<body>
+    <div class="BA-topbg">
+        <div class="BA-wrapper BA-top">
+            <a href="Mainpage.html"><img width="200" height="100" Class="BA-logo" src="picture/CUIFC.jpg"></a>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <p class="navbar-text" style="height: 26px">CUIFC</p>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a id="Home_button" href="Mainpage.html">Home</a></li>
+                <li><a href="./Profile.html">Profile</a></li>
+                <li><a href="./Activity.html">Activity Management</a></li>
+                <li><a href="./ReviewPage.html">Activity Review</a></li>
+                <li><a href="./Setting.html">Setting</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="logout_button" href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <p id="test"></p>
+        <a href="/Activity.html" class="previous">&laquo; Go back</a>
+    </div>
+    <div class="container">
+        <form id="Create_Activity" class="form-horizontal">
+            <fieldset>
+                <legend>Create Activity</legend>
+                <div class="form-group">
+                    <label for="actName">Activity Name:</label>
+                    <input type="text" class="form-control" id="actName" name="actName" required><br>
+                </div>
+                <div class="form-group">
+                    <label for="choose_type">Choose type:</label>
+                    <select id="type" class="form-control" name="type">
+                        <option value="academic">Academic</option>
+                        <option value="sports">Sports</option>
+                    </select><br>
+                </div>
+                <div class="form-group">
+                    <label for="choose_date">Date:</label>
+                    <input type="datetime-local" class="form-control" id="actDate" name="actDate" required><br>
+                </div>
+                <div class="form-group">
+                    <label for="choose_venue">Venue:</label>
+                    <input type="text" class="form-control" id="venue" name="venue" required><br>
+                </div>
+                <div class="form-group">
+                    <label for="max_part">Quota for activity:</label>
+                    <input type="number" class="form-control" id="max_part" min="1" name="max_Part" required><br>
+                </div>
+                <div class="form-group">
+                    <textarea id="act_detail" onfocusin=deleteDetail() class="form-control" rows="10" cols="30" name="detail">Please enter the detail of the activity.</textarea><br>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info">Create</button><br>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

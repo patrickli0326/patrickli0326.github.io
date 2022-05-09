@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="Activity.js"></script>
+    <script>window.onload = Load;</script>
+    <style>
+        #search {
+            background-image: url("picture/search.png");
+            background-position: 5px 5px;
+            background-size: 15px 15px;
+            padding: 3px 0px 3px 30px;
+            width: 30%;
+            background-repeat: no-repeat;
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+            background-color: #46B1D2;
+            color: white;
+        }
+
+            th.a {
+                width: 50px;
+            }
+
+            th.b {
+                width: 100px;
+            }
+
+            th.c {
+                width: 70px;
+            }
+
+            th.d {
+                width: 175px;
+            }
+
+            th.e {
+                width: 100px;
+            }
+
+            th.f {
+                width: 400px;
+            }
+
+            th.g {
+                width: 100px;
+            }
+
+            th.h {
+                width: 80px;
+            }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="BA-topbg">
+        <div class="BA-wrapper BA-top">
+            <a href="Mainpage.html"><img width="200" height="100" Class="BA-logo" src="picture/CUIFC.jpg"></a>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <p class="navbar-text" style="height: 26px">CUIFC</p>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a id="Home_button" href="Mainpage.html">Home</a></li>
+                <li><a href="./Profile.html">Profile</a></li>
+                <li><a href="./Activity.html">Activity Management</a></li>
+                <li><a href="./ReviewPage.html">Actvity Review</a></li>
+                <li><a href="./Setting.html">Setting</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="logout_button" href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container-fluid">
+        <p id="test"></p>
+        <a href="createActivity.html" class="btn btn-primary">Create Activity</a>
+        <a href="viewActivity.html" class="btn btn-primary">View my Activity</a>
+        <br><br>
+        <input type="text" id="search" onkeyup="search()" placeholder="Search for Activity">
+        Search by:
+        <select id="search_option">
+            <option value="0">Activity ID</option>
+            <option value="1">Activity Name</option>
+        </select>
+    </div>
+
+    <div class="container-fluid">
+        <table id="atab" class="table table-hover" style="width: 100%;visibility:hidden;">
+            <caption style="font-size:150%;">Academic activity</caption>
+            <tr>
+                <th class="a">ActivityID</th>
+                <th class="b">Activity Name</th>
+                <th class="c">Organizer</th>
+                <th class="d">Date</th>
+                <th class="e">Venue</th>
+                <th class="f">Detail</th>
+                <th class="g">Max participants</th>
+                <th class="h">No. of participants</th>
+                <th class="a">Join</th>
+            </tr>
+            <tbody id="arows">
+            </tbody>
+        </table>
+        <br />
+        <table id="stab" class="table table-hover" style="width:100%;visibility:hidden;">
+            <caption style="font-size:150%;">Sports activity</caption>
+            <tr>
+                <th class="a">ActivityID</th>
+                <th class="b">Activity Name</th>
+                <th class="c">Organizer</th>
+                <th class="d">Date</th>
+                <th class="e">Venue</th>
+                <th class="f">Detail</th>
+                <th class="g">Max participants</th>
+                <th class="h">No. of participants</th>
+                <th class="a">Join</th>
+            </tr>
+            <tbody id="srows">
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
